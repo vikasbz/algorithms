@@ -1,27 +1,23 @@
 from dataclasses import dataclass
 from typing import List
 
-from algorithms.sorting.bucket import Bucket, sample_bucket
+from algorithms.sorting.bucket import Bucket
 
 
 @dataclass
 class InsertionSort(Bucket):
     def sort(self) -> List[int]:
-        for i in range(1, len(self.items)):
-            key = self.items[i]
-
-            j = i - 1
-            while j >= 0 and key < self.items[j]:
-                self.items[j + 1] = self.items[j]
-                j -= 1
-
-            self.items[j + 1] = key
+        for index, value in enumerate(self.items[1:]):
+            while index >= 0 and value < self.items[index]:
+                self.items[index + 1] = self.items[index]
+                index -= 1
+            self.items[index + 1] = value
 
         print(f"Using insertion sort: {self.items}")
         return self.items
 
 
-insertion_sort = InsertionSort(sample_bucket.items)
+insertion_sort = InsertionSort([22, 55, 44, 11, 33, 77, 66])
 
 if __name__ == "__main__":
     insertion_sort.using_sorted()
