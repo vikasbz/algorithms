@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "algorithms"
+version = "0.1.0"
+description = ""
+authors = ["Vikas Z <Vikas Z <vikas.zingade@skillate.com>>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+environs = "^9.3.4"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+black = "^21.9b0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
