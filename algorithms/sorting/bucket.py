@@ -6,8 +6,9 @@ from typing import List
 class Bucket:
     items: List[int] = field(default_factory=list)
 
-    def using_sorted(self) -> List:
+    def using_sorted(self) -> List[int]:
         sorted_value = sorted(self.items)
+
         print(f"Using sorted function: {sorted_value}")
         return sorted_value
 
