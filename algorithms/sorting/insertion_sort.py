@@ -6,7 +6,7 @@ from algorithms.sorting.bucket import Bucket, sample_bucket
 
 @dataclass
 class InsertionSort(Bucket):
-    def sort(self) -> List:
+    def sort(self) -> List[int]:
         for i in range(1, len(self.items)):
             key = self.items[i]
 
