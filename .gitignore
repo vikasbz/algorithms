@@ -1,0 +1,17 @@
+# Environment Variables files
+*.env
+env.txt
+
+# Python cache files
+*.pyc
+*__pycache__
+
+# Log files (if any)
+logs
+
+# IDE-generated stuff
+.idea
+.vscode
+
+# Other stuff
+*.DS_Store
