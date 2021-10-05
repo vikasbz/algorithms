@@ -9,15 +9,15 @@ class Bucket:
     def using_default_sort(self) -> List[int]:
         sorted_value = sorted(self.items)
 
-        print(f"Using sorted function: {sorted_value}")
+        print(f"Using default sorting: {sorted_value}")
         return sorted_value
 
     def using_default_search(self, key: int) -> Union[int, None]:
         if key in self.items:
-            print(f"Key: {key} found")
+            print(f"Using default search. Key: {key} found")
             return key
 
-        print(f"Key: {key} not found")
+        print(f"Using default search. Key: {key} not found")
         return None
 
 
