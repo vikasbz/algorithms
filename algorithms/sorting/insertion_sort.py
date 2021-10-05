@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 from typing import List
 
-from algorithms.sorting.bucket import Bucket
+from algorithms.bucket import Bucket
 
 
 @dataclass
@@ -20,5 +20,5 @@ class InsertionSort(Bucket):
 insertion_sort = InsertionSort([22, 55, 44, 11, 33, 77, 66])
 
 if __name__ == "__main__":
-    insertion_sort.using_sorted()
+    insertion_sort.using_default_sort()
     insertion_sort.sort()
